@@ -31,15 +31,13 @@ def lambda_handler(event, context):
                 pass
 
 def read_last_tweet(id):
-    f_read = open(id, 'r')
-    last_read = int(f_read.read().strip())
-    f_read.close()
+    with open(id, 'r') as f_read:
+        last_read = int(f_read.read().strip())
     return last_read
 
 def save_last_tweet(last_read, id):
-    f_write = open(id, 'w')
-    f_write.write(str(last_read))
-    f_write.close()
+    with open(id, 'w') as f_write:
+        f_write.write(str(last_read))
     return
 
 def reply_to_tweets(tweet_text):

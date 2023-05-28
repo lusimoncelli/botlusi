@@ -228,3 +228,5 @@ lista_piropos=["tantas curvas y yo sin frenos",
     "si la gente fuera presa por ser linda vos tendrías perpetua",
     "disculpá, vos no sos la raíz de -1? porque no sos real",
     "como quisiera ser sol para darte todo el día"]
+
+lista_gpt = []

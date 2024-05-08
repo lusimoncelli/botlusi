@@ -2,12 +2,13 @@ import tweepy
 import random
 import lista_respuestas
 import os
+from keys import consumer_key, consumer_secretkey, acces_secrettoken, access_token
 
 def lambda_handler(event, context):
-    consumer_key = os.environ['consumer_key']
-    consumer_secretkey = os.environ['consumer_secretkey']
-    access_token = os.environ['access_token']
-    access_secrettoken = os.environ['access_secrettoken']
+    consumer_key = os.environ[consumer_key]
+    consumer_secretkey = os.environ[consumer_secretkey]
+    access_token = os.environ[access_token]
+    access_secrettoken = os.environ[access_secrettoken]
     
     auth = tweepy.OAuthHandler(consumer_key, consumer_secretkey)
     auth.set_access_token(access_token, access_secrettoken)
